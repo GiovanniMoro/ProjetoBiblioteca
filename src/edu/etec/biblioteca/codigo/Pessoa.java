@@ -1,13 +1,13 @@
 package edu.etec.biblioteca.codigo;
 
-public class Pessoa {
+public abstract class Pessoa {
     //Atributos
     protected String nome;
     protected int registro;
     protected String curso;
 
     //Metodo construtor - serve para definir o que precisa ser passado ao instanciar
-    public  Pessoa(String parametroNome, int parametroRegistro){
+    public Pessoa(String parametroNome, int parametroRegistro){
         this.nome = parametroNome;
         this.registro = parametroRegistro;
     }
@@ -46,5 +46,11 @@ public class Pessoa {
 
     public void setCurso(String curso) {
         this.curso = curso;
+    }
+
+    public ImprimirTudo(){
+        this.getNome();
+        this.getRegistro();
+        this.getCurso();
     }
 }

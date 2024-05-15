@@ -9,4 +9,12 @@ public class Professores extends Pessoa{
         super(parametroNome, parametroRegistro, parametroCurso);
         this.salario = parametroSalario;
     }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
+    }
 }
