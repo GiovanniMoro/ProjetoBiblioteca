@@ -1,6 +1,7 @@
 package edu.etec.biblioteca.codigo;
 public class Principal {
     public static void main(String[] args) {
+
         Professores professor1 = new Professores("James", 1, "DS", 10_000.00f);
         Professores professor2 = new Professores("Nadia", 2, "DS", 10_000.00f);
         Professores professor3 = new Professores("Leandro", 3, "DS", 10_000.00f);
@@ -23,14 +24,17 @@ public class Principal {
         aluno4.imprimirTudo();
         System.out.println();
 
-
-        Livros livro1 = new Livros("O pequeno principe", "Pedro", 34256, 12);
-        Livros livro2 = new Livros("Guardiões", "Arthur", 42536, 13);
+        Livros livro1 = new Livros("Dom Casmurro", "José de Alencar", 34256);
+        Livros livro2 = new Livros("O pequeno principe", "Pedro", 34256);
+        Livros livro3 = new Livros("Guardiões", "Arthur", 42536);
 
         livro1.imprimirTudo();
         System.out.println();
 
         livro2.imprimirTudo();
+        System.out.println();
+
+        livro3.imprimirTudo();
         System.out.println();
     }
 }

@@ -8,11 +8,14 @@ public class Livros {
     int registro;
 
 
-    public Livros(String titulo, String autor, int isnb, int registro) {
+    private static int valor = 3;
+
+    public Livros(String titulo, String autor, int isnb) {
         this.titulo = titulo;
         this.autor = autor;
         this.isnb = isnb;
-        this.registro = registro;
+        this.registro = valor;
+        valor = valor + 2;
     }
 
     public String getTitulo() {
