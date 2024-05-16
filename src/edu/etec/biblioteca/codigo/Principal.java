@@ -10,5 +10,27 @@ public class Principal {
         Alunos aluno3 =  new Alunos("Herbert", 3, "DS");
         Alunos aluno4 =  new Alunos("Gabriel", 4, "DS");
 
+
+        aluno1.imprimirTudo();
+        System.out.println();
+
+        aluno2.imprimirTudo();
+        System.out.println();
+
+        aluno3.imprimirTudo();
+        System.out.println();
+
+        aluno4.imprimirTudo();
+        System.out.println();
+
+
+        Livros livro1 = new Livros("O pequeno principe", "Pedro", 34256, 12);
+        Livros livro2 = new Livros("Guardiões", "Arthur", 42536, 13);
+
+        livro1.imprimirTudo();
+        System.out.println();
+
+        livro2.imprimirTudo();
+        System.out.println();
     }
 }

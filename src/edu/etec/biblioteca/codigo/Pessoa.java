@@ -48,9 +48,9 @@ public abstract class Pessoa {
         this.curso = curso;
     }
 
-    public ImprimirTudo(){
-        this.getNome();
-        this.getRegistro();
-        this.getCurso();
+    public void imprimirTudo(){
+        System.out.println("Nome:" + nome);
+        System.out.println("Registro:" + registro);
+        System.out.println("Curso:" + curso);
     }
 }
