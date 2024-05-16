@@ -7,14 +7,10 @@ public abstract class Pessoa {
     protected String curso;
 
     //Metodo construtor - serve para definir o que precisa ser passado ao instanciar
-    public Pessoa(String parametroNome, int parametroRegistro){
-        this.nome = parametroNome;
-        this.registro = parametroRegistro;
-    }
-    public Pessoa(String parametroNome, int parametroRegistro, String parametroCurso){
-        this.nome = parametroNome;
-        this.registro = parametroRegistro;
-        this.curso = parametroCurso;
+    public Pessoa(String Nome, int Registro, String Curso){
+        this.nome = Nome;
+        this.registro = Registro;
+        this.curso = Curso;
     }
 
 

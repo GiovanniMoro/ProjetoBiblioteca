@@ -5,9 +5,9 @@ public class Professores extends Pessoa{
     float salario;
 
     //Metodo Construtor
-    public Professores(String parametroNome, int parametroRegistro, String parametroCurso, float parametroSalario){
-        super(parametroNome, parametroRegistro, parametroCurso);
-        this.salario = parametroSalario;
+    public Professores(String Nome, int Registro, String Curso, float Salario){
+        super(Nome, Registro, Curso);
+        this.salario = Salario;
     }
 
     public float getSalario() {
