@@ -33,5 +33,7 @@ public class Principal {
         op.inserirLivro(livro2);
 
         op.selecionarLivros(2);
+
+        //op.selecionarLivrosString();
     }
 }
