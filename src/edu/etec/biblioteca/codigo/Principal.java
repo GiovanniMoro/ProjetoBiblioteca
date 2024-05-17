@@ -28,13 +28,10 @@ public class Principal {
         Livros livro2 = new Livros("O pequeno principe", "Pedro", 34256);
         Livros livro3 = new Livros("Guardiões", "Arthur", 42536);
 
-        livro1.imprimirTudo();
-        System.out.println();
+        //instancia do insert
+        Operacoes op = new Operacoes();
+        op.inserirLivro(livro2);
 
-        livro2.imprimirTudo();
-        System.out.println();
-
-        livro3.imprimirTudo();
-        System.out.println();
+        op.selecionarLivros(2);
     }
 }
