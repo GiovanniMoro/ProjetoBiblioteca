@@ -42,25 +42,55 @@ public class Operacoes {
         }
     }
 
-//    public static void selecionarLivrosString(String x) {
-//
-//        String sql = "SELECT * FROM tabelalivros WHERE nome LIKE \"?%\"";
-//
-//        try (Connection conexao = Conexao.conectar();
-//             PreparedStatement pstmt = conexao.prepareStatement(sql)) {
-//            pstmt.setString(1, x);
-//            ResultSet rs = pstmt.executeQuery();
-//            while (rs.next()) {
-//                int id = rs.getInt("id");
-//                String titulo = rs.getString("Titulo");
-//                String autor = rs.getString("Autor");
-//                int isbn = rs.getInt("Isbn");
-//                int registro = rs.getInt("Registro");
-//                System.out.println("ID: " + id + ", Titulo: " + titulo + ", Autor: " + autor + ", Isbn: " + isbn + ",Registro: " + registro);
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public static void selecionarLivrosString(String x) {
+
+        String sql = "SELECT * FROM tabelalivros WHERE titulo LIKE ? ";
+
+        try (Connection conexao = Conexao.conectar();
+             PreparedStatement pstmt = conexao.prepareStatement(sql)) {
+            pstmt.setString(1, "%" + x + "%");
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String titulo = rs.getString("Titulo");
+                String autor = rs.getString("Autor");
+                int isbn = rs.getInt("Isbn");
+                int registro = rs.getInt("Registro");
+                System.out.println("ID: " + id + ", Titulo: " + titulo + ", Autor: " + autor + ", Isbn: " + isbn + ",Registro: " + registro);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+    public static void alterarLivro(Livros livro, int idAlterar, String title, String name) {
+        String sql = "UPDATE tabelalivros set titulo = ?, autor = ? WHERE id = ?";
+
+        try (Connection conexao = Conexao.conectar();
+
+             PreparedStatement pstmt = conexao.prepareStatement(sql)) {
+
+            pstmt.setString(1, title);
+            pstmt.setString(2, name);
+
+            pstmt.setInt(3, idAlterar);
+
+            //Executar a atualização
+            int colunasAlteradas = pstmt.executeUpdate();
+
+
+            //Verificando se a atualização foi bem sucedida
+            if (colunasAlteradas > 0) {
+                System.out.println("Atualização bem-sucedida!");
+            }else {
+                System.out.println("Nenhum registro encontrado com ID fornecido");
+            }
+            } catch (SQLException e) {
+            e.printStackTrace();
+            }
+    }
 
 }
