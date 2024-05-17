@@ -41,4 +41,26 @@ public class Operacoes {
             e.printStackTrace();
         }
     }
+
+//    public static void selecionarLivrosString(String x) {
+//
+//        String sql = "SELECT * FROM tabelalivros WHERE nome LIKE \"?%\"";
+//
+//        try (Connection conexao = Conexao.conectar();
+//             PreparedStatement pstmt = conexao.prepareStatement(sql)) {
+//            pstmt.setString(1, x);
+//            ResultSet rs = pstmt.executeQuery();
+//            while (rs.next()) {
+//                int id = rs.getInt("id");
+//                String titulo = rs.getString("Titulo");
+//                String autor = rs.getString("Autor");
+//                int isbn = rs.getInt("Isbn");
+//                int registro = rs.getInt("Registro");
+//                System.out.println("ID: " + id + ", Titulo: " + titulo + ", Autor: " + autor + ", Isbn: " + isbn + ",Registro: " + registro);
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
 }
