@@ -66,7 +66,7 @@ public class Operacoes {
 
 
 
-    public static void alterarLivro(Livros livro, int idAlterar, String title, String name) {
+    public static void alterarLivro(int idAlterar, String title, String name) {
         String sql = "UPDATE tabelalivros set titulo = ?, autor = ? WHERE id = ?";
 
         try (Connection conexao = Conexao.conectar();

@@ -35,7 +35,8 @@ public class Principal {
 //        op.inserirLivro(livro3);
 //
 //        op.selecionarLivros(2);
+//
+        op.alterarLivro(3,"O Castelo em cima do monte ", "Ferran Gummer");
 
-        op.selecionarLivrosString("O p");
     }
 }
